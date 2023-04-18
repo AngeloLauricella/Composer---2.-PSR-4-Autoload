@@ -1,0 +1,106 @@
+Admin@DESKTOP-AEMTK31 MINGW64 ~/Desktop/ExoComposer
+$ composer install
+Composer could not find a composer.json file in C:\Users\Admin\Desktop\ExoComposer    
+To initialize a project, please create a composer.json file. See https://getcomposer.org/basic-usage
+
+Admin@DESKTOP-AEMTK31 MINGW64 ~/Desktop/ExoComposer
+$ composer init
+
+
+  Welcome to the Composer config generator  
+
+
+
+This command will guide you through creating your composer.json config.
+
+Package name (<vendor>/<name>) [admin/exo-composer]: 
+Description []: 
+Author [Angelo Lauricella <angelo_lauricella@icloud.com>, n to skip]: 
+Minimum Stability []: 
+Package Type (e.g. library, project, metapackage, composer-plugin) []: 
+License []: 
+
+Define your dependencies.
+
+Would you like to define your dependencies (require) interactively [yes]? 
+Search for a package: 
+Would you like to define your dev dependencies (require-dev) interactively [yes]? 
+Search for a package: 
+Add PSR-4 autoload mapping? Maps namespace "Admin\ExoComposer" to the entered relative path. [src/, n to skip]:
+
+{
+    "name": "admin/exo-composer",
+    "autoload": {
+        "psr-4": {
+            "Admin\\ExoComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Angelo Lauricella",
+            "email": "angelo_lauricella@icloud.com"
+        }
+    ],
+    "require": {}
+}
+
+Do you confirm generation [yes]?
+Generating autoload files
+Generated autoload files
+PSR-4 autoloading configured. Use "namespace Admin\ExoComposer;" in src/
+Include the Composer autoloader with: require 'vendor/autoload.php';
+
+Admin@DESKTOP-AEMTK31 MINGW64 ~/Desktop/ExoComposer
+$
+
+Admin@DESKTOP-AEMTK31 MINGW64 ~/Desktop/ExoComposer
+$ composer install
+No composer.lock file present. Updating dependencies to latest instead of installing from lock file. See https://getcomposer.org/install for more information.
+Loading composer repositories with package information
+Updating dependencies
+Nothing to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating autoload files
+
+Admin@DESKTOP-AEMTK31 MINGW64 ~/Desktop/ExoComposer
+$ php -S localhost:8000 -t public
+[Tue Apr 18 17:07:41 2023] PHP 8.2.3 Development Server (http://localhost:8000) started 
+
+Admin@DESKTOP-AEMTK31 MINGW64 ~/Desktop/ExoComposer
+$ php -S localhost:8001 -t public
+[Tue Apr 18 17:08:14 2023] PHP 8.2.3 Development Server (http://localhost:8001) started 
+[Tue Apr 18 17:08:18 2023] [::1]:65298 Accepted
+[Tue Apr 18 17:08:18 2023] PHP Fatal error:  Uncaught Error: Object of class App\Hello could not be converted to string in C:\Users\Admin\Desktop\ExoComposer\public\index.php:9Stack trace:
+#0 {main}
+  thrown in C:\Users\Admin\Desktop\ExoComposer\public\index.php on line 9
+[Tue Apr 18 17:08:18 2023] [::1]:65298 [500]: GET / - Uncaught Error: Object of class App\Hello could not be converted to string in C:\Users\Admin\Desktop\ExoComposer\public\index.php:9
+Stack trace:
+#0 {main}
+  thrown in C:\Users\Admin\Desktop\ExoComposer\public\index.php on line 9
+[Tue Apr 18 17:08:18 2023] [::1]:65298 Closing
+[Tue Apr 18 17:08:18 2023] [::1]:65299 Accepted
+[Tue Apr 18 17:09:03 2023] [::1]:65299 [200]: GET /
+[Tue Apr 18 17:09:03 2023] [::1]:65299 Closing
+[Tue Apr 18 17:09:03 2023] [::1]:65302 Accepted
+[Tue Apr 18 17:09:03 2023] [::1]:65302 [404]: GET /favicon.ico - No such file or directory
+[Tue Apr 18 17:09:03 2023] [::1]:65302 Closing
+[Tue Apr 18 17:11:31 2023] [::1]:65311 Accepted
+[Tue Apr 18 17:11:31 2023] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function App\Hello::talk(), 0 passed in C:\Users\Admin\Desktop\ExoComposer\public\index.php on line 9 and exactly 1 expected in C:\Users\Admin\Desktop\ExoComposer\src\Hello.php:8
+Stack trace:
+#0 C:\Users\Admin\Desktop\ExoComposer\public\index.php(9): App\Hello->talk()
+#1 {main}
+  thrown in C:\Users\Admin\Desktop\ExoComposer\src\Hello.php on line 8
+[Tue Apr 18 17:11:31 2023] [::1]:65311 [500]: GET / - Uncaught ArgumentCountError: Too few arguments to function App\Hello::talk(), 0 passed in C:\Users\Admin\Desktop\ExoComposer\public\index.php on line 9 and exactly 1 expected in C:\Users\Admin\Desktop\ExoComposer\src\Hello.php:8
+Stack trace:
+#0 C:\Users\Admin\Desktop\ExoComposer\public\index.php(9): App\Hello->talk()
+#1 {main}
+  thrown in C:\Users\Admin\Desktop\ExoComposer\src\Hello.php on line 8
+[Tue Apr 18 17:11:31 2023] [::1]:65311 Closing
+[Tue Apr 18 17:11:31 2023] [::1]:65312 Accepted
+[Tue Apr 18 17:11:56 2023] [::1]:65314 Accepted
+[Tue Apr 18 17:11:56 2023] [::1]:65312 [200]: GET /
+[Tue Apr 18 17:11:56 2023] [::1]:65312 Closing
+[Tue Apr 18 17:18:32 2023] [::1]:65314 Closed without sending a request; it was probably just an unused speculative preconnection
+[Tue Apr 18 17:18:32 2023] [::1]:65314 Closing
